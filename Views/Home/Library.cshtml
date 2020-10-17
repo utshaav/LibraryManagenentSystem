@@ -1,0 +1,24 @@
+@model List<Books>
+
+@{
+    ViewData["Title"] = "Library";
+}
+<h1 class="d-inline">Library</h1>
+<div class="card-columns">
+    @foreach (var book in Model)
+    {
+
+        <div class="card" style="width: 18rem;">
+
+            <img src="#" class="card-img-top" alt="...">
+
+
+            <div class="card-body">
+                <h5 class="card-title">@book.Title</h5>
+                <p class="card-text">Written By @book.Author</p>
+                <p class="card-text">Published By @book.Publisher</p>
+                <a class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    }
+</div>
